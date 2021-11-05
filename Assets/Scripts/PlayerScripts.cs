@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
-    private CharacterController controller;
-    private Vector3 moveDirection;
-    public float speed = 2;
+    public float speed = 6;
     float vx = 0;
-    bool leftFlag = false;
+    // bool leftFlag = false;
 
     //デフォルトで右向きキャラが左向きになるように設定されている。
     // Start is called before the first frame update
@@ -24,18 +22,18 @@ public class PlayerScripts : MonoBehaviour
         if (Input.GetKey("right"))
         {
             vx = speed;
-            leftFlag = false;
+            // leftFlag = false;
         }
         if (Input.GetKey("left"))
         {
             vx = -speed;
-            leftFlag = true;
+            // leftFlag = true;
         }
     }
 
     void FixedUpdate()
     {
         this.transform.Translate(vx / 50, 0, 0);
-        this.GetComponent<SpriteRenderer>().flipX = leftFlag;
+        // this.GetComponent<SpriteRenderer>().flipX = leftFlag;
     }
 }

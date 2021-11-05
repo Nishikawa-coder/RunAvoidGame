@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class PlayerJumpController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D rbody2D;
+
+    public float jumpForce = 1000f;
+
+    private int jumpCount = 0;
+
     void Start()
     {
-        
+        rbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 2)
+        {
+            this.rbody2D.AddForce(transform.up * jumpForce);
+            jumpCount++;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Floor"))
+        {
+            jumpCount = 0;
+        }
     }
 }
