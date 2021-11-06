@@ -22,7 +22,7 @@ public class MoveWithinCamera : MonoBehaviour
         Vector2 pos = transform.position;
 
         pos.x = Mathf.Clamp(pos.x, min.x, max.x);
-        pos.y = Mathf.Clamp(pos.y, min.y, max.y);
+        pos.y = Mathf.Clamp(pos.y, -100, max.y);
 
         transform.position = pos;
     }
