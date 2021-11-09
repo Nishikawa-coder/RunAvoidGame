@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class OnCollision_StopGame : MonoBehaviour
+public class PlayerCollisionToEnemy : MonoBehaviour
 {
-    public string targetObjectName;
+    [SerializeField]
+    private LifeGaugeCharacter lifeGaugeCharacter;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,10 @@ public class OnCollision_StopGame : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (collision.gameObject.name == targetObjectName)
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            // Time.timeScale = 0;
-            SceneManager.LoadScene("GameOverScene");
+            Debug.Log("ダメージ");
+            lifeGaugeCharacter.Damage(1);
         }
     }
     // Update is called once per frame
