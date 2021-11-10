@@ -21,6 +21,12 @@ public class LifeGaugeCharacter : MonoBehaviour
         //　体力ゲージに反映
         lifeGauge.SetLifeGauge(hp);
     }
+    void Update(){
+        if(this.transform.position.y<-5){
+            Time.timeScale = 0;
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
 
 
     //　ダメージ処理メソッド（全削除＆HP分作成）

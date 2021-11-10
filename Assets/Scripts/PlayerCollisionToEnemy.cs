@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCollisionToEnemy : MonoBehaviour
 {
-    [SerializeField]
-    private LifeGaugeCharacter lifeGaugeCharacter;
+    [SerializeField] private ChangeLayer changeLayer;
+    [SerializeField] private LifeGaugeCharacter lifeGaugeCharacter;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +14,11 @@ public class PlayerCollisionToEnemy : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("ダメージ");
             lifeGaugeCharacter.Damage(1);
+            changeLayer.Setlayer(7);
+
         }
     }
     // Update is called once per frame
