@@ -17,7 +17,7 @@ public class PlayerJumpController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 2)
+        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 1)
         {
             this.rbody2D.AddForce(transform.up * jumpForce);
             jumpCount++;
