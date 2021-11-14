@@ -8,11 +8,7 @@ public class MaceScript : MonoBehaviour
     public float delaytime = 0.8f;
     Rigidbody2D rbody;
     // Start is called before the first frame update
-    void Start()
-    {
-        // コルーチンの起動
-        // StartCoroutine(DelayCoroutine());
-    }
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Floor"))
@@ -28,10 +24,6 @@ public class MaceScript : MonoBehaviour
         rigid.AddForce(force, ForceMode2D.Force);
     }
 
-    // void Update()
-    // {
-
-    // }
 }
 
 

@@ -9,6 +9,7 @@ public class PlayerJumpController : MonoBehaviour
     public float jumpForce = 1000f;
 
     private int jumpCount = 0;
+    public int maxjumpCount = 2;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerJumpController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < 1)
+        if (Input.GetKeyDown(KeyCode.Space) && this.jumpCount < maxjumpCount)
         {
             this.rbody2D.AddForce(transform.up * jumpForce);
             jumpCount++;
