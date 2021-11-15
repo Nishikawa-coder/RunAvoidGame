@@ -20,6 +20,10 @@ public class PlayerCollisionToEnemy : MonoBehaviour
             changeLayer.Setlayer(7);
 
         }
+        // if (collision.gameObject.CompareTag("ObstacleEnemy"))
+        // {
+        //     obstacleFactory.GetComponent<ObstacleFactoryScript>().SpawnEnemy();
+        // }
     }
     // Update is called once per frame
     void Update()

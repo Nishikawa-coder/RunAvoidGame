@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ReplayScript : MonoBehaviour
 {
+    public string LoadSceneName = "";
     public void ReplayGame(){
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene(LoadSceneName);
     }
     // Start is called before the first frame update
     void Start()

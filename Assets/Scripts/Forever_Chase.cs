@@ -20,7 +20,6 @@ public class Forever_Chase : MonoBehaviour
     {
         Vector3 dir = (targetObject.transform.position - this.transform.position).normalized;
         float vx = dir.x * speed;
-
         float vy = dir.y * speed;
         rbody.velocity = new Vector2(vx, vy);
         this.GetComponent<SpriteRenderer>().flipX = (vx < 0);
