@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObstacleEnemy2Script : MonoBehaviour
 {
     public float speed = 1.0f;

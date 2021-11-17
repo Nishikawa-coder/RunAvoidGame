@@ -5,8 +5,9 @@ using UnityEngine;
 public class ObstacleEnemy1Script : MonoBehaviour
 {
 	[SerializeField] private GameObject obstacleFactory;
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
 	{
+		Debug.Log("collision");
 		// 衝突した相手にPlayerタグが付いているとき
 		if (collision.gameObject.tag == "Player")
 		{
