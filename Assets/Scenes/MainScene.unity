@@ -261,17 +261,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4077510373449768649, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
+      propertyPath: speed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077510373449768650, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4077510373449768653, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4077510373449768653, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.1
+      value: -5.92
       objectReference: {fileID: 0}
     - target: {fileID: 4077510373449768653, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 2.07
       objectReference: {fileID: 0}
     - target: {fileID: 4077510373449768653, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -307,6 +315,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
+--- !u!1 &1943723272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4077510373449768648, guid: 312b1f1b4612e426587269c71c5644fc, type: 3}
+  m_PrefabInstance: {fileID: 692925450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1943723273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943723272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05fe31ebf5e2540b185c93bd8fd6ee46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1943723274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943723272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4e3c065fa0449039fb90af40535df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 1000
+  maxjumpCount: 2
+--- !u!114 &1943723275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1943723272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fbe34b4a0524bbe90a8480d01ee436, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeLayer: {fileID: 0}
+  lifeGaugeCharacter: {fileID: 0}
+  obstacleFactory: {fileID: 0}
 --- !u!1 &1955428789
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +372,7 @@ GameObject:
   - component: {fileID: 1955428790}
   - component: {fileID: 1955428792}
   - component: {fileID: 1955428791}
+  - component: {fileID: 1955428793}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -869,3 +924,29 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1955428793
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955428789}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7, y: -2}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 43.56, y: 3.56}
+  m_EdgeRadius: 0
