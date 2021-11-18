@@ -11,18 +11,11 @@ public class MoveH_Flip : MonoBehaviour
     bool flipFlag = false;
     // Start is called before the first frame update
     public float speed = 5;
+    public float delaytime = 1.0f;
     void Start()
     {
         count = 0;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    //一定時間ごとにずっと行う
     void FixedUpdate()
     {
         this.transform.Translate(speed / 50, 0, 0);
@@ -34,8 +27,18 @@ public class MoveH_Flip : MonoBehaviour
             //180度回転するので絵が上下反転させて
             flipFlag = !flipFlag;
             this.GetComponent<SpriteRenderer>().flipY = flipFlag;
-
+            // Debug.Log("stop!");
+            // this.transform.Translate(0, 0, 0);
+            // Invoke(nameof(FlipMove), delaytime);
         }
     }
+    // void FlipMove()
+    // {
+    //     this.transform.Rotate(0, 0, 180);
+    //     count = 0;
+    //     //180度回転するので絵が上下反転させて
+    //     flipFlag = !flipFlag;
+    //     this.GetComponent<SpriteRenderer>().flipY = flipFlag;
+    // }
 
 }
