@@ -18,7 +18,7 @@ public class PlayerCollisionToEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             lifeGaugeCharacter.Damage(1);
-            changeLayer.Setlayer(7);
+            changeLayer.Setlayer();
 
         }
         //         if (collision.gameObject.CompareTag("ObstacleEnemy"))
@@ -26,9 +26,5 @@ public class PlayerCollisionToEnemy : MonoBehaviour
         //     obstacleFactory.GetComponent<ObstacleFactoryScript>().SpawnEnemy();
         // }
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 }

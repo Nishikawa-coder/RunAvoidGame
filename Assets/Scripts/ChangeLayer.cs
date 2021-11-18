@@ -8,8 +8,8 @@ public class ChangeLayer : MonoBehaviour
     public SpriteRenderer sp;
     [SerializeField] private GameObject testObject;
 
-    public void Setlayer(int layerNumber){
-        testObject.layer = layerNumber;
+    public void Setlayer(){
+        testObject.layer = 9;
         //点滅させられないので後々変更する。
         float level = Mathf.Abs(Mathf.Sin(Time.time*10));
         sp.color = new Color(1f,1f,1f,level*0.5f);
