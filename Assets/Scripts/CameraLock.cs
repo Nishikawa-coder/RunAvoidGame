@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraLock : MonoBehaviour
 {
+    public string playername;
     private GameObject player;  //プレイヤー情報格納用
     private Vector3 offset; // 相対距離取得用
     public float max_x;
@@ -11,7 +12,7 @@ public class CameraLock : MonoBehaviour
     void Start()
     {
         //　Playerの情報を取得
-        this.player = GameObject.Find("player");
+        this.player = GameObject.Find(playername);
 
         // メインカメラ（自分自身）とPlayerとの相対距離を求める
         offset = transform.position - player.transform.position;
