@@ -6,6 +6,7 @@ public class CameraLock : MonoBehaviour
 {
     private GameObject player;  //プレイヤー情報格納用
     private Vector3 offset; // 相対距離取得用
+    public float max_x;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,13 @@ public class CameraLock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x < max_x)
+        {
+            Vector3 position = transform.position;
         //　新しいトランスフォームの値を代入する
-        transform.position = player.transform.position + offset;
+            position.x = player.transform.position.x + offset.x;
+            transform.position = position;
+        }
+
     }
 }
