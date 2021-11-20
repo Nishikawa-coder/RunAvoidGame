@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 1264801995}
   - component: {fileID: 1264801994}
   - component: {fileID: 1264801993}
+  - component: {fileID: 1264802002}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -343,7 +344,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264801989}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.14, y: 3.25, z: 0}
+  m_LocalPosition: {x: 0, y: 3.25, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -481,6 +482,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34
+--- !u!114 &1264802002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264801989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d319d8f7d7829472e95d475dddf21e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1488136052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26998,6 +27011,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8030357332693924502, guid: f52cfd94d5fa3430ebe53a43b1a41c25, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8030357332693924502, guid: f52cfd94d5fa3430ebe53a43b1a41c25, type: 3}
       propertyPath: playername
       value: Player1

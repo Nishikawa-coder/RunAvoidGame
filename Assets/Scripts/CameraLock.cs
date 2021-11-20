@@ -13,15 +13,13 @@ public class CameraLock : MonoBehaviour
     {
         //　Playerの情報を取得
         this.player = GameObject.Find(playername);
-
-        // メインカメラ（自分自身）とPlayerとの相対距離を求める
-        offset = transform.position - player.transform.position;
+        offset.x = 40.0f;
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (transform.position.x < max_x)
+        if (transform.position.x < max_x && player.transform.position.x>=0.0f)
         {
             Vector3 position = transform.position;
         //　新しいトランスフォームの値を代入する
