@@ -24,7 +24,7 @@ public class LifeGaugeCharacter : MonoBehaviour
     void Update(){
         if(this.transform.position.y<-40){
             Time.timeScale = 0;
-            SceneManager.LoadScene("GameOverScene");
+            SceneManager.LoadScene("GameOverScene1");
         }
     }
 
@@ -42,7 +42,7 @@ public class LifeGaugeCharacter : MonoBehaviour
         else
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene("GameOverScene");
+            SceneManager.LoadScene("GameOverScene1");
         }
     }
 }
