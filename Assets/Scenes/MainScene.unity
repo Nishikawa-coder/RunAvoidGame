@@ -197,6 +197,7 @@ GameObject:
   - component: {fileID: 180588969}
   - component: {fileID: 180588968}
   - component: {fileID: 180588965}
+  - component: {fileID: 180588972}
   m_Layer: 0
   m_Name: circle
   m_TagString: Untagged
@@ -421,6 +422,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sp: {fileID: 180588961}
   testObject: {fileID: 180588959}
+--- !u!114 &180588972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180588959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d319d8f7d7829472e95d475dddf21e10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1242819570
 PrefabInstance:
   m_ObjectHideFlags: 0
