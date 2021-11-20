@@ -10157,7 +10157,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 190424987667084009, guid: 870d7f421ef1741f2a383a2bc8fdea1e, type: 3}
       propertyPath: texts.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 190424987667084009, guid: 870d7f421ef1741f2a383a2bc8fdea1e, type: 3}
       propertyPath: texts.Array.data[0]
