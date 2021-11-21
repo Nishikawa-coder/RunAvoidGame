@@ -7,10 +7,12 @@ public class ShowPanelScript : MonoBehaviour
 {
     public float delaytime = 1.0f;
     [SerializeField] GameObject showObject;
+    [SerializeField] GameObject spaceObject;
     // Start is called before the first frame update
     void Start()
     {
         showObject.SetActive(false);
+        spaceObject.SetActive(false);
         Invoke(nameof(DelayMethod),delaytime);
     }
 
@@ -21,5 +23,6 @@ public class ShowPanelScript : MonoBehaviour
     void DelayMethod()
     {
         showObject.SetActive(true);
+        spaceObject.SetActive(true);
     }
 }

@@ -12,14 +12,16 @@ public class TextDisplay : MonoBehaviour
     int textNumber;
     string displayText;
     int textCharNumber;
+    
     void Start()
     {
-
     }
     void Update()
     {
+        
         if (textCharNumber != texts[textNumber].Length) 
-        {//文章を1文字ずつ表示
+        {
+            //文章を1文字ずつ表示
             displayText = displayText + texts[textNumber][textCharNumber];
             textCharNumber = textCharNumber + 1;
         }
@@ -27,7 +29,7 @@ public class TextDisplay : MonoBehaviour
         {
             if (textNumber != texts.Length - 1)
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     displayText = "";
                     textCharNumber = 0;
