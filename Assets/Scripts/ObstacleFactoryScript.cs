@@ -15,9 +15,10 @@ public class ObstacleFactoryScript : MonoBehaviour
 
     public void SpawnEnemy()
     {
+        Debug.Log("Spawn");
         var parent = this.transform;
         // enemy = this.GetComponent<Image>();
-        Instantiate(enemy, new Vector3(transform.position.x+400.0f, transform.position.y, transform.position.z), transform.rotation, parent);
-        Instantiate(enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+        Instantiate(enemy, new Vector3(transform.position.x, transform.position.y-100.0f, transform.position.z), transform.rotation, parent);
+        // Instantiate(enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
     }
 }
