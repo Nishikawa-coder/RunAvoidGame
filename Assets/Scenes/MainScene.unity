@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goalText: {fileID: 111863908}
-  NextScene: 3
+  NextScene: 4
   delaytime: 2
 --- !u!50 &180588966
 Rigidbody2D:
