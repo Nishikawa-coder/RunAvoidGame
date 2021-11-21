@@ -18,7 +18,10 @@ public class MoveH_OnCollision_Flip : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        speed = -speed;
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            speed = -speed;
+        }
     }
 
     // Update is called once per frame
