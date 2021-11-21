@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
+    private Animator anim;  //Animatorをanimという変数で定義する
+    // [SerializeField] GameObject catleg;
+    // [SerializeField] GameObject body;
     public float speed = 6;
     float vx = 0;
     // bool leftFlag = false;
@@ -12,7 +15,7 @@ public class PlayerScripts : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,18 +25,24 @@ public class PlayerScripts : MonoBehaviour
         if (Input.GetKey("right"))
         {
             vx = speed;
-            // leftFlag = false;
+            anim.SetBool("walk", true);
         }
-        if (Input.GetKey("left"))
+        else if (Input.GetKey("left"))
         {
             vx = -speed;
-            // leftFlag = true;
+            anim.SetBool("walk", true);
+        }
+        else
+        {
+            anim.SetBool("walk", false);
         }
     }
 
     void FixedUpdate()
     {
         this.transform.Translate(vx / 50, 0, 0);
-        // this.GetComponent<SpriteRenderer>().flipX = leftFlag;
+        // catleg.GetComponent<CatLegScript>().CatLegFlip(vx < 0);
+        // body.GetComponent<BodyScript>().BodyFlip(vx < 0);
+        this.GetComponent<SpriteRenderer>().flipX = (vx < 0);
     }
 }
