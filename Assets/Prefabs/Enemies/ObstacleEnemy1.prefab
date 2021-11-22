@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5306361959680815717}
   m_Layer: 7
   m_Name: ObstacleEnemy1
-  m_TagString: Untagged
+  m_TagString: ObstacleEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxCount: 100
   speed: 5
+  delaytime: 1
 --- !u!114 &5306361959680815717
 MonoBehaviour:
   m_ObjectHideFlags: 0

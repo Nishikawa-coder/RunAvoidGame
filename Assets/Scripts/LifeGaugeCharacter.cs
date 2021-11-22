@@ -11,7 +11,7 @@ public class LifeGaugeCharacter : MonoBehaviour
     //　LifeGaugeスクリプト
     [SerializeField]
     private LifePanel lifeGauge;
-
+    public string gameOverScene = "GameOverScene1";
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class LifeGaugeCharacter : MonoBehaviour
     void Update(){
         if(this.transform.position.y<-40){
             Time.timeScale = 0;
-            SceneManager.LoadScene("GameOverScene1");
+            SceneManager.LoadScene(gameOverScene);
         }
     }
 
@@ -42,7 +42,7 @@ public class LifeGaugeCharacter : MonoBehaviour
         else
         {
             Time.timeScale = 0;
-            SceneManager.LoadScene("GameOverScene1");
+            SceneManager.LoadScene(gameOverScene);
         }
     }
 }

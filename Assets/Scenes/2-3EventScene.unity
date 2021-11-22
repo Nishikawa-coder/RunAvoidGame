@@ -10197,23 +10197,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: NextScene
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: delaytime
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: texts.Array.data[0]
-      value: "\uFF1F\uFF1F\u300C\u3084\u3042\uFF01\u3055\u3063\u304D\u3076\u308A\uFF01\u300D"
+      value: "\uFF1F\uFF1F\u300C\u3053\u308C\u3001\u843D\u3061\u3066\u305F\u3093\u3060\u3002\u826F\u304B\u3063\u305F\u3089\u3042\u3052\u308B\u3088\u3002\u300D"
       objectReference: {fileID: 0}
     - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: texts.Array.data[1]
-      value: "\uFF1F\uFF1F\u300C\u53CB\u9054\u304C\u306D\u3002\u541B\u304C\u826F\u3044\u5B50\u3060\u304B\u3089\u304F\u308C\u308B\u3063\u3066\u3002\u826F\u304B\u3063\u305F\u306D\u3002\u300D"
-      objectReference: {fileID: 0}
-    - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
-      propertyPath: texts.Array.data[2]
-      value: "\u732B\u306E\u8DB3\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
+      value: "\u4EBA\u9593\u306E\u624B\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
       objectReference: {fileID: 0}
     - target: {fileID: 8353182428721864851, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: m_Name

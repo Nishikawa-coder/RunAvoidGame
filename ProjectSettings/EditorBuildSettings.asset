@@ -19,11 +19,20 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/1-2EventScene.unity
-    guid: a6c4efd3761de4cbba16ae2df3986fc0
+    guid: dbd413ba033af4c2cb2229df86793c43
   - enabled: 1
     path: Assets/Scenes/Stage2_Scene.unity
     guid: e006fcc1f3aa74e548b0ede201926cca
   - enabled: 1
+    path: Assets/Scenes/2-3EventScene.unity
+    guid: a6c4efd3761de4cbba16ae2df3986fc0
+  - enabled: 1
+    path: Assets/Scenes/Stage3_Scene.unity
+    guid: 44e1ced8b11454640bf42a97fa116671
+  - enabled: 1
     path: Assets/Scenes/GameOverScene1.unity
     guid: c006e55075fb2412b843d25096c03dc9
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene2.unity
+    guid: 1b25adc24b47b4253b546259c4961d7f
   m_configObjects: {}
