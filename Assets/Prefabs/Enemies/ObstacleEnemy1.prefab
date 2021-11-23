@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5306361959680815712}
   - component: {fileID: 5306361959680815713}
   - component: {fileID: 5306361959680815717}
+  - component: {fileID: 4128702152207265443}
   m_Layer: 7
   m_Name: ObstacleEnemy1
   m_TagString: ObstacleEnemy
@@ -108,7 +109,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5306361959680815726}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7940fe85c41040a1935bc53b9122648, type: 3}
   m_Name: 
@@ -129,3 +130,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleFactory: {fileID: 0}
+--- !u!114 &4128702152207265443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5306361959680815726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4498254f1acb24c518241c5f04535e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCount: 50
+  speed: 5

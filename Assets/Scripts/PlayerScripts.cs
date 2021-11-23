@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
+    [SerializeField] GameObject rightmark;
     private Animator anim;  //Animatorをanimという変数で定義する
     // [SerializeField] GameObject catleg;
     // [SerializeField] GameObject body;
@@ -26,11 +27,13 @@ public class PlayerScripts : MonoBehaviour
         {
             vx = speed;
             anim.SetBool("walk", true);
+            rightmark.SetActive(false);
         }
         else if (Input.GetKey("left"))
         {
             vx = -speed;
             anim.SetBool("walk", true);
+            rightmark.SetActive(false);
         }
         else
         {
