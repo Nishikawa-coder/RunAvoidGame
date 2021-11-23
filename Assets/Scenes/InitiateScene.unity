@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &417961201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1101063585, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+  m_PrefabInstance: {fileID: 7809243496254429575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &819421218
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: spaceObject
+      value: 
+      objectReference: {fileID: 417961201}
     - target: {fileID: 8353182428721864851, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: m_Name
       value: FadeCanvas

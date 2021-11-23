@@ -4,22 +4,19 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
+    public AudioClip sound1;
+    AudioSource audioSource;
     [SerializeField] GameObject rightmark;
     private Animator anim;  //Animatorをanimという変数で定義する
-    // [SerializeField] GameObject catleg;
-    // [SerializeField] GameObject body;
     public float speed = 6;
     float vx = 0;
-    // bool leftFlag = false;
 
-    //デフォルトで右向きキャラが左向きになるように設定されている。
-    // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         vx = 0;
@@ -28,12 +25,14 @@ public class PlayerScripts : MonoBehaviour
             vx = speed;
             anim.SetBool("walk", true);
             rightmark.SetActive(false);
+            audioSource.PlayOneShot(sound1);
         }
         else if (Input.GetKey("left"))
         {
             vx = -speed;
             anim.SetBool("walk", true);
             rightmark.SetActive(false);
+            audioSource.PlayOneShot(sound1);
         }
         else
         {
@@ -44,8 +43,6 @@ public class PlayerScripts : MonoBehaviour
     void FixedUpdate()
     {
         this.transform.Translate(vx / 50, 0, 0);
-        // catleg.GetComponent<CatLegScript>().CatLegFlip(vx < 0);
-        // body.GetComponent<BodyScript>().BodyFlip(vx < 0);
         this.GetComponent<SpriteRenderer>().flipX = (vx < 0);
     }
 }

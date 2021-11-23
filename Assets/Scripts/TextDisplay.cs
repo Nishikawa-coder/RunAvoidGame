@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TextDisplay : MonoBehaviour
 {
-    public float delaytime = 2.0f;
+    [SerializeField] GameObject spaceObject;
+    public float delaytime = 1.0f;
     public int NextScene = 3;
     public string[] texts;
     int textNumber;
@@ -37,6 +38,7 @@ public class TextDisplay : MonoBehaviour
                 }
             }else
             {
+                spaceObject.SetActive(false);
                 Invoke(nameof(DelayMethod), delaytime);
             }
         }

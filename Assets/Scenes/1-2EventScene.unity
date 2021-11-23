@@ -10286,6 +10286,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: spaceObject
+      value: 
+      objectReference: {fileID: 1911370384}
+    - target: {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: texts.Array.data[0]
       value: "\uFF1F\uFF1F\u300C\u3084\u3042\uFF01\u3055\u3063\u304D\u3076\u308A\uFF01\u300D"
       objectReference: {fileID: 0}
@@ -10303,6 +10307,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+--- !u!1 &1911370384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1101063585, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+  m_PrefabInstance: {fileID: 1911370383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2047918845
 GameObject:
   m_ObjectHideFlags: 0
