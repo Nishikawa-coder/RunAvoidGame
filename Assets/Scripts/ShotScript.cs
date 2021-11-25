@@ -16,21 +16,9 @@ public class ShotScript : MonoBehaviour
 
     void SpawnBullet()
     {
-        Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-        // if(count<3)
-        // {
-        //     Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-        //     count++;
-        // }
-        
+        Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation); 
     }
-    // void OnWillRenderObject()
-    // {
-    //     if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)
-    //     {
-    //         InvokeRepeating("SpawnBullet", 0f, 3f);
-    //     }
-    // }
+    
     void Update()
     {
         if(Rendered)

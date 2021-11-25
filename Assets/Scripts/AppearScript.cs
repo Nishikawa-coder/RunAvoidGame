@@ -37,9 +37,6 @@ public class AppearScript : MonoBehaviour
         foreach ( var foreverchaseObject in foreverchaseObjects)
         {
             foreverchaseObject.SetActive(false);
-            int i=0;
-            Debug.Log(i);
-            i+=1;
         }
     }
 }

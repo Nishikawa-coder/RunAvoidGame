@@ -284,6 +284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: hikari
       objectReference: {fileID: 0}
+    - target: {fileID: 9016241887884958572, guid: f6a042555370349cbb18237750930ef4, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 9016241887884958576, guid: f6a042555370349cbb18237750930ef4, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -33006,6 +33010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1554670691, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 1554670692, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.815312

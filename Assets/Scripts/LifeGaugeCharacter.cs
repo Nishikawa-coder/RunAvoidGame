@@ -16,8 +16,6 @@ public class LifeGaugeCharacter : MonoBehaviour
     void Start()
     {
         Time.timeScale = 1;
-        //　体力の初期化
-        hp = 3;
         //　体力ゲージに反映
         lifeGauge.SetLifeGauge(hp);
     }
