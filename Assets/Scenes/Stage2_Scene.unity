@@ -33066,6 +33066,10 @@ PrefabInstance:
       propertyPath: rightmark
       value: 
       objectReference: {fileID: 516864745}
+    - target: {fileID: 219598732018055139, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 219598732018055142, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
       propertyPath: lifeGauge
       value: 

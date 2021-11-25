@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71865dcddcfd4a8fa70d73b9fa93a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightmark: {fileID: 2484730152512791235, guid: cfd527dd28e044396b9f37f593288430, type: 3}
+  rightmark: {fileID: 1243477667}
   speed: 60
 --- !u!114 &535386988
 MonoBehaviour:
@@ -7521,6 +7521,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knife: {fileID: 629533324377793325, guid: 9f7ed5952e9c644f3b341d6a5cc9e9cb, type: 3}
   enemy: {fileID: 1208352457}
+--- !u!1 &1243477667 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2484730152512791235, guid: cfd527dd28e044396b9f37f593288430, type: 3}
+  m_PrefabInstance: {fileID: 956460579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282030894 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3445761906594493409, guid: 0092bbcea31b14098871b7b06980056b, type: 3}
