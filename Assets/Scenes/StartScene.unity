@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6faca6f3c1474dcbac1783fa5714629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DontDestroyEnabled: 1
+  MainBGM: {fileID: 175629125}
 --- !u!4 &175629124
 Transform:
   m_ObjectHideFlags: 0
