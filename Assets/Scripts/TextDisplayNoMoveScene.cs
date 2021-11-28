@@ -2,22 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+// using UnityEngine.Playables;
+// using UnityEngine.Timeline;
+
+// [RequireComponent(typeof(PlayableDirector))]
 
 public class TextDisplayNoMoveScene : MonoBehaviour
 {
     [SerializeField] GameObject spaceObject;
+    // [SerializeField] GameObject timeline;
     public float delaytime = 1.0f;
     // public int NextScene = 3;
     public string[] texts;
     int textNumber;
     string displayText;
     int textCharNumber;
+    // [SerializeField] private TimelineAsset timeline;
+    // private PlayableDirector director;
     
     void Start()
     {
+        // director = this.GetComponent<PlayableDirector>();
     }
-    void Update()
+    public void Update()
     {
         
         if (textCharNumber != texts[textNumber].Length) 
@@ -39,7 +46,8 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             }else
             {
                 spaceObject.SetActive(false);
-                Invoke(nameof(DelayMethod), delaytime);
+                // timeline.GetComponent<CallTimeline>().StartTimeline();
+                // Invoke(nameof(DelayMethod), delaytime);
             }
         }
         this.GetComponent<Text>().text = displayText;
@@ -47,6 +55,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     }
     void DelayMethod()
     {
-        // FadeManageScript.FadeOut(NextScene);
+        // director.Play(timeline);
     }
+    
 }
