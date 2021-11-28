@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class TextDisplayNoMoveScene : MonoBehaviour
 {
     [SerializeField] GameObject spaceObject;
-    // [SerializeField] GameObject timeline;
+    [SerializeField] GameObject lastevent;
     public float delaytime = 1.0f;
     // public int NextScene = 3;
     public string[] texts;
@@ -46,7 +46,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             }else
             {
                 spaceObject.SetActive(false);
-                // timeline.GetComponent<CallTimeline>().StartTimeline();
+                lastevent.GetComponent<WalkScript>().StartEvent();
                 // Invoke(nameof(DelayMethod), delaytime);
             }
         }
