@@ -44,7 +44,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
                 spaceObject.SetActive(false);
                 if(eventStarted==false)
                 {
-                    lastevent.GetComponent<WalkScript>().StartEvent();
+                    // lastevent.GetComponent<WalkScript>().StartEvent();
                     eventStarted = true;
                 }
                 

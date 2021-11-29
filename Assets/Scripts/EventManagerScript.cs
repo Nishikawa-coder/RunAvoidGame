@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkScript : MonoBehaviour
+public class EventManagerScript : MonoBehaviour
 {
     [SerializeField] GameObject cat;
     [SerializeField] GameObject player;
@@ -12,15 +12,14 @@ public class WalkScript : MonoBehaviour
     private int count;
     void Start()
     {
-        
+        StartCoroutine("CatWalk");
     }
     public void StartEvent()
     {
-        StartCoroutine("CatWalk");
     }
     IEnumerator CatWalk()
     {
-        Debug.Log("catwalk");
+        // Debug.Log("catwalk");
         count=0;
         yield return new WaitForSeconds(1f);
         while(count<max_counts[0])
@@ -33,7 +32,7 @@ public class WalkScript : MonoBehaviour
     }
     IEnumerator PlayerWalkwithCamera()
     {
-        Debug.Log("playerwalk");
+        // Debug.Log("playerwalk");
         count=0;
         while(count<max_counts[1])
         {
@@ -46,7 +45,7 @@ public class WalkScript : MonoBehaviour
     }
     IEnumerator Camera()
     {
-        Debug.Log("camera");
+        // Debug.Log("camera");
         yield return new WaitForSeconds(1f);
         count=0;
         while(count<max_counts[2])
