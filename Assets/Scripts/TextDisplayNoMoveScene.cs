@@ -19,38 +19,40 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     
     void Start()
     {
+        StartCoroutine("TextDisplay");
     }
-    public void FixedUpdate()
+    IEnumerator TextDisplay()
     {
         
-        if (textCharNumber != texts[textNumber].Length) 
+        while(textNumber != texts.Length - 1)
         {
-            //文章を1文字ずつ表示
-            displayText = displayText + texts[textNumber][textCharNumber];
-            textCharNumber = textCharNumber + 1;
-        }
-        else
-        {
-            if (textNumber != texts.Length - 1)
+            while(textCharNumber != texts[textNumber].Length) 
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     displayText = "";
                     textCharNumber = 0;
                     textNumber = textNumber + 1;
+                    break;
                 }
-            }else
-            {
-                spaceObject.SetActive(false);
-                if(eventStarted==false)
-                {
-                    // lastevent.GetComponent<WalkScript>().StartEvent();
-                    eventStarted = true;
-                }
-                
+                //文章を1文字ずつ表示
+                displayText = displayText + texts[textNumber][textCharNumber];
+                textCharNumber = textCharNumber + 1;
+                yield return new WaitForSeconds(0.04f);
+                this.GetComponent<Text>().text = displayText;
             }
         }
-        this.GetComponent<Text>().text = displayText;
+        // else
+        //     {
+        //         spaceObject.SetActive(false);
+        //         if(eventStarted==false)
+        //         {
+        //             // lastevent.GetComponent<WalkScript>().StartEvent();
+        //             eventStarted = true;
+        //         }
+                
+        //     }
+        // }
         
     }
 
