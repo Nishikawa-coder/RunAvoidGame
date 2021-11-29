@@ -7,7 +7,7 @@ public class WalkScript : MonoBehaviour
     [SerializeField] GameObject cat;
     [SerializeField] GameObject player;
     [SerializeField] GameObject maincamera;
-    public float speed = -60;
+    public float[] speed;
     public int[] max_counts;
     private int count;
     void Start()
@@ -16,15 +16,16 @@ public class WalkScript : MonoBehaviour
     }
     public void StartEvent()
     {
-        StartCoroutine(CatWalk());
+        StartCoroutine("CatWalk");
     }
     IEnumerator CatWalk()
     {
+        Debug.Log("catwalk");
         count=0;
         yield return new WaitForSeconds(1f);
         while(count<max_counts[0])
         {
-            cat.transform.Translate(speed/300,0,0);
+            cat.transform.Translate(speed[0]/50,0,0);
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
@@ -32,12 +33,12 @@ public class WalkScript : MonoBehaviour
     }
     IEnumerator PlayerWalkwithCamera()
     {
-        // Debug.Log("playerwalk");
+        Debug.Log("playerwalk");
         count=0;
         while(count<max_counts[1])
         {
-            player.transform.Translate(speed/5,0,0);
-            maincamera.transform.Translate(speed/50,0,0);
+            player.transform.Translate(speed[1]/50,0,0);
+            maincamera.transform.Translate(speed[2]/50,0,0);
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
@@ -45,11 +46,12 @@ public class WalkScript : MonoBehaviour
     }
     IEnumerator Camera()
     {
+        Debug.Log("camera");
         yield return new WaitForSeconds(1f);
         count=0;
-        while(count<max_counts[1])
+        while(count<max_counts[2])
         {
-            maincamera.transform.Translate(speed/400,0,0);
+            maincamera.transform.Translate(speed[3]/50,0,0);
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }

@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-// using UnityEngine.Playables;
-// using UnityEngine.Timeline;
 
-// [RequireComponent(typeof(PlayableDirector))]
 
 public class TextDisplayNoMoveScene : MonoBehaviour
 {
@@ -17,14 +14,13 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     int textNumber;
     string displayText;
     int textCharNumber;
-    // [SerializeField] private TimelineAsset timeline;
-    // private PlayableDirector director;
+    bool eventStarted = false;
+    
     
     void Start()
     {
-        // director = this.GetComponent<PlayableDirector>();
     }
-    public void Update()
+    public void FixedUpdate()
     {
         
         if (textCharNumber != texts[textNumber].Length) 
@@ -46,16 +42,17 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             }else
             {
                 spaceObject.SetActive(false);
-                lastevent.GetComponent<WalkScript>().StartEvent();
-                // Invoke(nameof(DelayMethod), delaytime);
+                if(eventStarted==false)
+                {
+                    lastevent.GetComponent<WalkScript>().StartEvent();
+                    eventStarted = true;
+                }
+                
             }
         }
         this.GetComponent<Text>().text = displayText;
         
     }
-    void DelayMethod()
-    {
-        // director.Play(timeline);
-    }
+
     
 }
