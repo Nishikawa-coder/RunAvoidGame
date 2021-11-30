@@ -8,6 +8,7 @@ public class EventManagerScript : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject maincamera;
     [SerializeField] GameObject text;
+    [SerializeField] GameObject text2;
     [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject showObject;
     public float[] speed;
@@ -25,7 +26,15 @@ public class EventManagerScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
         showObject.SetActive(true);
         spaceObject.SetActive(true);
-        StartCoroutine(text.GetComponent<TextDisplayNoMoveScene>().TextDisplay());
+        StartCoroutine(text.GetComponent<TextDisplayNoMoveScene>().TextDisplay(1));
+        yield break;
+    }
+    public IEnumerator DisplayText2()
+    {
+        spaceObject.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        spaceObject.SetActive(true);
+        StartCoroutine(text2.GetComponent<TextDisplayNoMoveScene>().TextDisplay(2));
         yield break;
     }
     public IEnumerator CatWalk()

@@ -22,7 +22,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     {
         // StartCoroutine("TextDisplay");
     }
-    public IEnumerator TextDisplay()
+    public IEnumerator TextDisplay(int number)
     {
         
         while(textNumber != texts.Length)
@@ -36,19 +36,25 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         }
         
             
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    displayText = "";
-                    textCharNumber = 0;
-                    textNumber = textNumber + 1;
-                }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            displayText = "";
+            textCharNumber = 0;
+            textNumber = textNumber + 1;
+        }
             
             this.GetComponent<Text>().text = displayText;
         }
-            StartCoroutine((lastevent).GetComponent<EventManagerScript>().CatWalk());
-            yield break;
+        switch(number){
+            case 1:
+                StartCoroutine((lastevent).GetComponent<EventManagerScript>().DisplayText2());
+                break;
+            case 2:
+                StartCoroutine((lastevent).GetComponent<EventManagerScript>().CatWalk());
+                break;
 
         }
+    }
         // else
         //     {
         //         spaceObject.SetActive(false);
