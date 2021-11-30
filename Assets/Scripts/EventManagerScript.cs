@@ -8,6 +8,8 @@ public class EventManagerScript : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject maincamera;
     [SerializeField] GameObject text;
+    [SerializeField] GameObject spaceObject;
+    [SerializeField] GameObject showObject;
     public float[] speed;
     public int[] max_counts;
     private int count;
@@ -20,14 +22,17 @@ public class EventManagerScript : MonoBehaviour
     }
     IEnumerator DisplayText()
     {
-        StartCoroutine(text.GetComponent<TextDisplayNoMoveScene>().TextDisplay());
-        yield return CatWalk();
-    }
-    IEnumerator CatWalk()
-    {
-        // Debug.Log("catwalk");
-        count=0;
         yield return new WaitForSeconds(1f);
+        showObject.SetActive(true);
+        spaceObject.SetActive(true);
+        StartCoroutine(text.GetComponent<TextDisplayNoMoveScene>().TextDisplay());
+        yield break;
+    }
+    public IEnumerator CatWalk()
+    {
+        spaceObject.SetActive(false);
+        Debug.Log("catwalk");
+        count=0;
         while(count<max_counts[0])
         {
             cat.transform.Translate(speed[0]/50,0,0);

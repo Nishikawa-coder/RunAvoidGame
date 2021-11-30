@@ -212,6 +212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1101063585, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5191998896004529884, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -296,6 +300,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7548822148146538626, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8101017356499156001, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8353182428721864851, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
       propertyPath: m_Name
       value: FadeCanvas Variant
@@ -306,6 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7981652950878072186, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
+    - {fileID: 7548822148146538626, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
 --- !u!1 &137239893 stripped
 GameObject:
@@ -324,9 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1b888a3be8044c58306d0eab4e21af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spaceObject: {fileID: 137239895}
   lastevent: {fileID: 2054129616}
-  delaytime: 1
   texts:
   - "\uFF1F\uFF1F\u300C\u304A\u3081\u3067\u3068\u3046\uFF01\u3053\u308C\u3067\u541B\u306F\u7ACB\u6D3E\u306A\u4EBA\u9593\u3060\u306D\uFF01\u300D"
   - "\uFF1F\uFF1F\u300C\u307B\u3089\u3001\u76EE\u304C\u898B\u3048\u308B\u3088\u3046\u306B\u306A\u3063\u305F\u304B\u3089\u3055\u3063\u304D\u3068\u666F\u8272\u304C\u9055\u3046\u3067\u3057\u3087\uFF1F\u300D"
@@ -342,31 +353,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1101063585, guid: 7e19cb31369d94d2f85bcbc0eaf3be7c, type: 3}
   m_PrefabInstance: {fileID: 137239892}
   m_PrefabAsset: {fileID: 0}
---- !u!320 &137239903
-PlayableDirector:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 137239893}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 82e02856530434e4985db7eac427a830, type: 2}
-  m_InitialState: 1
-  m_WrapMode: 0
-  m_DirectorUpdateMode: 1
-  m_InitialTime: 0
-  m_SceneBindings:
-  - key: {fileID: 5086133085701334565, guid: 82e02856530434e4985db7eac427a830, type: 2}
-    value: {fileID: 1070801382}
-  - key: {fileID: -5667016614215432342, guid: 82e02856530434e4985db7eac427a830, type: 2}
-    value: {fileID: 1926641947}
-  - key: {fileID: -4252649117934569085, guid: 82e02856530434e4985db7eac427a830, type: 2}
-    value: {fileID: 1566157865}
-  - key: {fileID: 0}
-    value: {fileID: 0}
-  m_ExposedReferences:
-    m_References: []
 --- !u!1 &473711945
 GameObject:
   m_ObjectHideFlags: 0
@@ -31318,6 +31304,9 @@ MonoBehaviour:
   cat: {fileID: 1070801375}
   player: {fileID: 1926641946}
   maincamera: {fileID: 1566157861}
+  text: {fileID: 137239893}
+  spaceObject: {fileID: 137239895}
+  showObject: {fileID: 1186373670}
   speed:
   - -50
   - -30

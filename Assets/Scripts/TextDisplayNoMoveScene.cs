@@ -6,9 +6,10 @@ using UnityEngine.UI;
 
 public class TextDisplayNoMoveScene : MonoBehaviour
 {
-    [SerializeField] GameObject spaceObject;
+    // [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject lastevent;
-    public float delaytime = 1.0f;
+    // [SerializeField] GameObject showObject;
+    // public float delaytime = 1.0f;
     // public int NextScene = 3;
     public string[] texts;
     int textNumber;
@@ -24,7 +25,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     public IEnumerator TextDisplay()
     {
         
-        while(textNumber != texts.Length - 1)
+        while(textNumber != texts.Length)
         {
             yield return new  WaitForSeconds(0.02f);
             if (textCharNumber != texts[textNumber].Length) 
@@ -44,6 +45,9 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             
             this.GetComponent<Text>().text = displayText;
         }
+            StartCoroutine((lastevent).GetComponent<EventManagerScript>().CatWalk());
+            yield break;
+
         }
         // else
         //     {
@@ -58,5 +62,4 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         // }
         
 
-    
 }
