@@ -7,15 +7,21 @@ public class EventManagerScript : MonoBehaviour
     [SerializeField] GameObject cat;
     [SerializeField] GameObject player;
     [SerializeField] GameObject maincamera;
+    [SerializeField] GameObject text;
     public float[] speed;
     public int[] max_counts;
     private int count;
     void Start()
     {
-        StartCoroutine("CatWalk");
+        StartCoroutine("DisplayText");
     }
     public void StartEvent()
     {
+    }
+    IEnumerator DisplayText()
+    {
+        StartCoroutine(text.GetComponent<TextDisplayNoMoveScene>().TextDisplay());
+        yield return CatWalk();
     }
     IEnumerator CatWalk()
     {

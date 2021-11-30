@@ -14,33 +14,36 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     int textNumber;
     string displayText;
     int textCharNumber;
-    bool eventStarted = false;
+    // bool eventStarted = false;
     
     
     void Start()
     {
-        StartCoroutine("TextDisplay");
+        // StartCoroutine("TextDisplay");
     }
-    IEnumerator TextDisplay()
+    public IEnumerator TextDisplay()
     {
         
         while(textNumber != texts.Length - 1)
         {
-            while(textCharNumber != texts[textNumber].Length) 
-            {
+            yield return new  WaitForSeconds(0.02f);
+            if (textCharNumber != texts[textNumber].Length) 
+        {
+            //文章を1文字ずつ表示
+            displayText = displayText + texts[textNumber][textCharNumber];
+            textCharNumber = textCharNumber + 1;
+        }
+        
+            
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     displayText = "";
                     textCharNumber = 0;
                     textNumber = textNumber + 1;
-                    break;
                 }
-                //文章を1文字ずつ表示
-                displayText = displayText + texts[textNumber][textCharNumber];
-                textCharNumber = textCharNumber + 1;
-                yield return new WaitForSeconds(0.04f);
-                this.GetComponent<Text>().text = displayText;
-            }
+            
+            this.GetComponent<Text>().text = displayText;
+        }
         }
         // else
         //     {
@@ -54,7 +57,6 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         //     }
         // }
         
-    }
 
     
 }
