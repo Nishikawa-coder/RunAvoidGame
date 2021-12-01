@@ -31628,10 +31628,12 @@ MonoBehaviour:
   text: {fileID: 137239893}
   cat: {fileID: 1070801375}
   player: {fileID: 1448137464}
+  maincamera: {fileID: 1566157861}
   spaceObject: {fileID: 137239895}
   speed:
   - 7
-  max_counts: 96000000
+  - 10
+  max_counts: 5a0000002c010000
 --- !u!4 &2054129618
 Transform:
   m_ObjectHideFlags: 0
