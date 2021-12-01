@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainSoundScript : MonoBehaviour
 {
-   //シングルトン設定ここから
+   //シングルトン設定ここから（オブジェクトを取得しなくても他のオブジェクトから呼び出せる）
     static public MainSoundScript instance;
 
     private void Awake()

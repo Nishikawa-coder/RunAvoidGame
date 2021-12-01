@@ -36,10 +36,10 @@ EditorBuildSettings:
     path: Assets/Scenes/LastScene.unity
     guid: a2f9827289e454f82ab778a71c0e2e26
   - enabled: 1
-    path: Assets/Scenes/AfterLastEventScene.unity
+    path: Assets/Scenes/LastScene2.unity
     guid: 9e6ae350ee32d45208092fba581ec190
   - enabled: 1
-    path: Assets/Scenes/LastScene 1.unity
+    path: Assets/Scenes/LastScene3.unity
     guid: 76528e53f066d41a5b35f07b0bfcd1ab
   - enabled: 1
     path: Assets/Scenes/GameOverScene1.unity

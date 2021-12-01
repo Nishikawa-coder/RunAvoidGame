@@ -35,7 +35,6 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             textCharNumber = textCharNumber + 1;
         }
         
-            
         if (Input.GetKeyDown(KeyCode.Space))
         {
             displayText = "";
@@ -51,6 +50,9 @@ public class TextDisplayNoMoveScene : MonoBehaviour
                 break;
             case 2:
                 StartCoroutine((lastevent).GetComponent<EventManagerScript>().CatWalk());
+                break;
+            case 3:
+                StartCoroutine((lastevent).GetComponent<EventManagerScript>().PlayerBackWalk());
                 break;
 
         }

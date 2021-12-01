@@ -9,6 +9,7 @@ public class EventManagerScript : MonoBehaviour
     [SerializeField] GameObject maincamera;
     [SerializeField] GameObject text;
     [SerializeField] GameObject text2;
+    [SerializeField] GameObject text3;
     [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject showObject;
     public float[] speed;
@@ -18,9 +19,7 @@ public class EventManagerScript : MonoBehaviour
     {
         StartCoroutine("DisplayText");
     }
-    public void StartEvent()
-    {
-    }
+    
     IEnumerator DisplayText()
     {
         yield return new WaitForSeconds(1f);
@@ -48,6 +47,7 @@ public class EventManagerScript : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
+        cat.GetComponent<SpriteRenderer>().flipX = true;
         yield return PlayerWalkwithCamera();
     }
     IEnumerator PlayerWalkwithCamera()
@@ -57,7 +57,7 @@ public class EventManagerScript : MonoBehaviour
         while(count<max_counts[1])
         {
             player.transform.Translate(speed[1]/50,0,0);
-            maincamera.transform.Translate(speed[2]/50,0,0);
+            maincamera.transform.Translate(speed[1]/50,0,0);
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
@@ -70,9 +70,38 @@ public class EventManagerScript : MonoBehaviour
         count=0;
         while(count<max_counts[2])
         {
-            maincamera.transform.Translate(speed[3]/50,0,0);
+            maincamera.transform.Translate(speed[2]/50,0,0);
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
+        yield return DisplayText3();
+    }
+    IEnumerator DisplayText3()
+    {
+        spaceObject.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        spaceObject.SetActive(true);
+        StartCoroutine(text3.GetComponent<TextDisplayNoMoveScene>().TextDisplay(3));
+        yield break;
+    }
+    public IEnumerator PlayerBackWalk()
+    {
+        count=0;
+        while(count<max_counts[3])
+        {
+            player.transform.Translate(speed[3]/50,0,0);
+            yield return new WaitForSeconds(0.01f);
+            count+=1;
+        }
+        yield return new WaitForSeconds(0.5f);
+        count=0;
+        while(count<max_counts[3])
+        {
+            Debug.Log("move");
+            player.transform.Translate(speed[3]/50,0,0);
+            yield return new WaitForSeconds(0.01f);
+            count+=1;
+        }
+
     }
 }
