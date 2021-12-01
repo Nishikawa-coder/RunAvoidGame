@@ -86,6 +86,7 @@ public class EventManagerScript : MonoBehaviour
     }
     public IEnumerator PlayerBackWalk()
     {
+        yield return new WaitForSeconds(1f);
         count=0;
         while(count<max_counts[3])
         {
