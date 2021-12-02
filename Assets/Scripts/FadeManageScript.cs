@@ -17,9 +17,7 @@ public class FadeManageScript:MonoBehaviour{
     //フェードインアウトのフラグ
     public static bool isFadeIn = false;
     public static bool isFadeOut = false;
-
-    //遷移先のシーン番号
-    private static int nextScene = 1;
+    private static int nextScene;
 
     //フェード用のCanvasとImage生成
     static void Init()
@@ -56,10 +54,10 @@ public class FadeManageScript:MonoBehaviour{
     public static void FadeOut(int n)
     {
         if (fadeImage == null) Init();
-        nextScene = n;
         fadeImage.color = Color.clear;
         fadeCanvas.enabled = true;
         isFadeOut = true;
+        nextScene = n;
     }
 
     void Update()

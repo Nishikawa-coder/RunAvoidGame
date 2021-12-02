@@ -232,8 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6faca6f3c1474dcbac1783fa5714629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainBGM: {fileID: 175629125}
-  MainBGM1: {fileID: 1282794360}
+  mainBGM: {fileID: 175629125}
+  mainBGM1: {fileID: 1282794360}
   beforeScene: 
 --- !u!4 &175629124
 Transform:

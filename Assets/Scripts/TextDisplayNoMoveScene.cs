@@ -53,10 +53,10 @@ public class TextDisplayNoMoveScene : MonoBehaviour
                 StartCoroutine((lastevent).GetComponent<EventManager2Script>().PlayerWalk2());
                 break;
             case 5:
-                StartCoroutine((lastevent).GetComponent<EventManager2Script>().CatWalk());
+                StartCoroutine((lastevent).GetComponent<EventManager4Script>().CatWalk());
                 break;
             case 6:
-                StartCoroutine((lastevent).GetComponent<EventManager2Script>().PlayerWalk4());
+                StartCoroutine((lastevent).GetComponent<EventManager4Script>().PlayerWalk2());
                 break;
             case 7:
                 StartCoroutine((lastevent).GetComponent<EventManager3Script>().CatWalk());

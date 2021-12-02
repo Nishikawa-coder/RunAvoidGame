@@ -91,7 +91,7 @@ public class EventManagerScript : MonoBehaviour
     }
     public IEnumerator PlayerBackWalk()
     {
-        // bgmObject.GetComponent<ScaryBGM>().PlayMusic();
+        bgmObject.GetComponent<ScaryBGM>().PlayMusic();
         // bgm.SetActive(true);
         // DontDestroyOnLoad (bgm.gameObject);
         spaceObject.SetActive(false);

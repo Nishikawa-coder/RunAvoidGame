@@ -26,8 +26,8 @@ public class BGMScript : MonoBehaviour
 
 
 
-    public AudioSource MainBGM;
-    public AudioSource MainBGM1;
+    public AudioSource mainBGM;
+    public AudioSource mainBGM1;
     public string beforeScene;//string型の変数beforeSceneを宣言 
     // public string beforescene = "InitiateScene";
     // public string nextscene = "ExplanationScene";
@@ -35,7 +35,7 @@ public class BGMScript : MonoBehaviour
     public void Start()
     {
         beforeScene = "StartScene";//起動時のシーン名 を代入しておく
-        MainBGM.Play();
+        mainBGM.Play();
 
         //シーンが切り替わった時に呼ばれるメソッドを登録
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
@@ -47,16 +47,16 @@ public class BGMScript : MonoBehaviour
         // Scene1からScene2へ
         if (beforeScene == "InitiateScene" && nextScene.name == "ExplanationScene")
         {
-            MainBGM.Stop();
+            mainBGM.Stop();
             Debug.Log("music stop");
         }
         if (beforeScene == "ExplanationScene" && nextScene.name == "MainScene")
         {
-            MainBGM1.Play();
+            mainBGM1.Play();
         }
         if (beforeScene == "3-4EventScene" && nextScene.name == "LastScene")
         {
-            MainBGM1.Stop();
+            mainBGM1.Stop();
         }
         
 
