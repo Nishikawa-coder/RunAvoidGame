@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; 
 
-public class MainSoundScript : MonoBehaviour
+public class BGMScript : MonoBehaviour
 {
    //シングルトン設定ここから（オブジェクトを取得しなくても他のオブジェクトから呼び出せる）
-    static public MainSoundScript instance;
+    static public BGMScript instance;
 
     private void Awake()
     {
@@ -26,19 +26,22 @@ public class MainSoundScript : MonoBehaviour
 
 
 
-    public AudioSource MainBGM;//AudioSource型の変数A_BGMを宣言　対応するAudioSourceコンポーネントをアタッチ
-    private string beforeScene;//string型の変数beforeSceneを宣言 
+    public AudioSource MainBGM;
+    public AudioSource MainBGM1;
+    public string beforeScene;//string型の変数beforeSceneを宣言 
+    // public string beforescene = "InitiateScene";
+    // public string nextscene = "ExplanationScene";
 
-    void Start()
+    public void Start()
     {
         beforeScene = "StartScene";//起動時のシーン名 を代入しておく
-        MainBGM.Play();//A_BGMのAudioSourceコンポーネントに割り当てたAudioClipを再生
+        MainBGM.Play();
 
         //シーンが切り替わった時に呼ばれるメソッドを登録
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
     }
      //シーンが切り替わった時に呼ばれるメソッド　
-    void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
+    public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
     {      
         //シーンがどう変わったかで判定
         // Scene1からScene2へ
@@ -46,8 +49,16 @@ public class MainSoundScript : MonoBehaviour
         {
             MainBGM.Stop();
             Debug.Log("music stop");
-        }         
-
+        }
+        if (beforeScene == "ExplanationScene" && nextScene.name == "MainScene")
+        {
+            MainBGM1.Play();
+        }
+        if (beforeScene == "3-4EventScene" && nextScene.name == "LastScene")
+        {
+            MainBGM1.Stop();
+        }
+        
 
         //遷移後のシーン名を「１つ前のシーン名」として保持
         beforeScene = nextScene.name;

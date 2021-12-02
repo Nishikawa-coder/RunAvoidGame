@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class EventManager2Script : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class EventManager2Script : MonoBehaviour
     [SerializeField] GameObject maincamera;
     [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject heart;
+    [SerializeField] GameObject bgmObject;
+    // public AudioSource bgm;
     public float[] speed;
     public int[] max_counts;
     private int count;
@@ -56,7 +59,9 @@ public class EventManager2Script : MonoBehaviour
     }
     IEnumerator CameraAndCatMove()
     {
-        // Transform CameraTransform = camera.transform;
+        yield return new WaitForSeconds(3f);
+        // bgmObject.GetComponent<ScaryBGM>().StopMusic();
+        // bgm.GetComponent<ScaryBGM>().Destroy();        
         Vector3 pos = maincamera.transform.position;
         pos.x=313f;
         maincamera.transform.position=pos;

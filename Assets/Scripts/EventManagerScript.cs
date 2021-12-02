@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
+
 
 public class EventManagerScript : MonoBehaviour
 {
@@ -12,11 +14,14 @@ public class EventManagerScript : MonoBehaviour
     [SerializeField] GameObject text3;
     [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject showObject;
+    [SerializeField] GameObject bgmObject;
+    // [SerializeField] GameObject bgm;
     public float[] speed;
     public int[] max_counts;
     private int count;
     void Start()
     {
+        FadeManageScript.FadeIn();
         StartCoroutine("DisplayText");
     }
     
@@ -86,6 +91,9 @@ public class EventManagerScript : MonoBehaviour
     }
     public IEnumerator PlayerBackWalk()
     {
+        // bgmObject.GetComponent<ScaryBGM>().PlayMusic();
+        // bgm.SetActive(true);
+        // DontDestroyOnLoad (bgm.gameObject);
         spaceObject.SetActive(false);
         yield return new WaitForSeconds(1f);
         count=0;
@@ -104,6 +112,7 @@ public class EventManagerScript : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
+        yield return new WaitForSeconds(3f);
         yield return FadeOut();
     }
     IEnumerator FadeOut()
