@@ -8,15 +8,10 @@ public class TextDisplayNoMoveScene : MonoBehaviour
 {
     // [SerializeField] GameObject spaceObject;
     [SerializeField] GameObject lastevent;
-    // [SerializeField] GameObject showObject;
-    // public float delaytime = 1.0f;
-    // public int NextScene = 3;
     public string[] texts;
     int textNumber;
     string displayText;
-    int textCharNumber;
-    // bool eventStarted = false;
-    
+    int textCharNumber;    
     
     void Start()
     {
@@ -57,22 +52,16 @@ public class TextDisplayNoMoveScene : MonoBehaviour
             case 4:
                 StartCoroutine((lastevent).GetComponent<EventManager2Script>().PlayerWalk2());
                 break;
+            case 5:
+                StartCoroutine((lastevent).GetComponent<EventManager2Script>().CatWalk());
+                break;
+            case 6:
+                StartCoroutine((lastevent).GetComponent<EventManager2Script>().PlayerWalk4());
+                break;
             
             
 
         }
     }
-        // else
-        //     {
-        //         spaceObject.SetActive(false);
-        //         if(eventStarted==false)
-        //         {
-        //             // lastevent.GetComponent<WalkScript>().StartEvent();
-        //             eventStarted = true;
-        //         }
-                
-        //     }
-        // }
         
-
 }

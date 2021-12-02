@@ -32589,6 +32589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: right
       objectReference: {fileID: 0}
+    - target: {fileID: 2484730152512791235, guid: cfd527dd28e044396b9f37f593288430, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfd527dd28e044396b9f37f593288430, type: 3}
 --- !u!1001 &1659989253
@@ -33010,6 +33014,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 208469463, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 208469463, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1554670691, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
       propertyPath: m_Layer
       value: 11
@@ -33062,6 +33074,10 @@ PrefabInstance:
       propertyPath: goalText
       value: 
       objectReference: {fileID: 768189913}
+    - target: {fileID: 219598732018055137, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
+      propertyPath: sound1
+      value: 
+      objectReference: {fileID: 8300000, guid: 05b01dfd7720a41efba30bd4aa6a6c60, type: 3}
     - target: {fileID: 219598732018055137, guid: 49834dd5df228443baf4d771f42c4e92, type: 3}
       propertyPath: rightmark
       value: 

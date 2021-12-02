@@ -86,6 +86,7 @@ public class EventManagerScript : MonoBehaviour
     }
     public IEnumerator PlayerBackWalk()
     {
+        spaceObject.SetActive(false);
         yield return new WaitForSeconds(1f);
         count=0;
         while(count<max_counts[3])
@@ -103,6 +104,11 @@ public class EventManagerScript : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
-
+        yield return FadeOut();
+    }
+    IEnumerator FadeOut()
+    {
+        FadeManageScript.FadeOut(12);
+        yield break;
     }
 }

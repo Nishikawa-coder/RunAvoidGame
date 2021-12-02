@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerScripts : MonoBehaviour
 {
-    // public AudioClip sound1;
-    // AudioSource audioSource;
+    public AudioClip sound1;
+    AudioSource audioSource;
     [SerializeField] GameObject rightmark;
     private Animator anim;  //Animatorをanimという変数で定義する
     public float speed = 6;
@@ -14,7 +14,7 @@ public class PlayerScripts : MonoBehaviour
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        // audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,18 +25,21 @@ public class PlayerScripts : MonoBehaviour
             vx = speed;
             anim.SetBool("walk", true);
             rightmark.SetActive(false);
-            // audioSource.PlayOneShot(sound1);
+            audioSource.PlayOneShot(sound1);
+            // GetComponent<AudioSource>().PlayOneShot();
         }
         else if (Input.GetKey("left"))
         {
             vx = -speed;
             anim.SetBool("walk", true);
             rightmark.SetActive(false);
-            // audioSource.PlayOneShot(sound1);
+            audioSource.PlayOneShot(sound1);
+            // GetComponent<AudioSource>().PlayOneShot();
         }
         else
         {
             anim.SetBool("walk", false);
+            audioSource.Stop();
         }
     }
 
