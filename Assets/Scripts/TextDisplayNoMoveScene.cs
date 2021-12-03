@@ -12,6 +12,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     int textNumber;
     string displayText;
     int textCharNumber;    
+
     
     void Start()
     {
@@ -19,26 +20,41 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     }
     public IEnumerator TextDisplay(int number)
     {
-        
-        while(textNumber != texts.Length)
+        foreach (string text in texts)
+        {
+            string displayText = "";
+            foreach (char c in text)
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                    break;
+                yield return new  WaitForSeconds(0.02f);
+                displayText += c;
+                this.GetComponent<Text>().text = displayText;
+            }
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+        }  
+        this.GetComponent<Text>().text = "";
+        /*while(textNumber != texts.Length)
         {
             yield return new  WaitForSeconds(0.02f);
             if (textCharNumber != texts[textNumber].Length) 
-        {
-            //文章を1文字ずつ表示
-            displayText = displayText + texts[textNumber][textCharNumber];
-            textCharNumber = textCharNumber + 1;
-        }
+            {
+                //文章を1文字ずつ表示
+                displayText = displayText + texts[textNumber][textCharNumber];
+                textCharNumber = textCharNumber + 1;
+            }
         
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            displayText = "";
-            textCharNumber = 0;
-            textNumber = textNumber + 1;
-        }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                displayText = "";
+                textCharNumber = 0;
+                textNumber = textNumber + 1;
+            }
             
             this.GetComponent<Text>().text = displayText;
-        }
+        }*/
+
         switch(number){
             case 1:
                 StartCoroutine((lastevent).GetComponent<EventManagerScript>().DisplayText2());
