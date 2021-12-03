@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour
+public class Move2Script : MonoBehaviour
 {
     public float speed;
     public int max_count;
@@ -21,6 +21,15 @@ public class MoveScript : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
             count+=1;
         }
+        yield return new WaitForSeconds(1f);
+        count = 0;
+        while(count<max_count)
+        {
+            transform.Translate(speed/50,0,0);
+            yield return new WaitForSeconds(0.01f);
+            count+=1;
+        }
+        yield return new WaitForSeconds(3f);
         if(move!=null) StartCoroutine(move.Move());
         if(move2!=null) StartCoroutine(move2.Move());
         if(speak!=null) StartCoroutine(speak.TextDisplay());
@@ -29,6 +38,4 @@ public class MoveScript : MonoBehaviour
         if(specialEvent!=null) specialEvent.FadeOut();
         yield break;
     }
-    
-
 }

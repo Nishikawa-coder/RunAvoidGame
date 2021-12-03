@@ -13,8 +13,12 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     int textNumber;
     string displayText;
     int textCharNumber;
-    public MoveScript next;    
+    public MoveScript move;
+    public Move2Script move2;    
+    public TextDisplayNoMoveScene speak;    
     public EventManagerScript specialEvent;    
+    public StopScript stop;    
+    public ScaryBGM bgmObject;    
 
     void Start()
     {
@@ -24,6 +28,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         spaceObject.SetActive(true);
         foreach (string text in texts)
         {
+            yield return new  WaitForSeconds(0.1f);
             string displayText = "";
             foreach (char c in text)
             {
@@ -38,7 +43,13 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         }  
         this.GetComponent<Text>().text = "";
         spaceObject.SetActive(false);
-        if(next!=null) StartCoroutine(next.Move());
+        if(move!=null) StartCoroutine(move.Move());
+        if(move2!=null) StartCoroutine(move2.Move());
+        if(speak!=null) StartCoroutine(speak.TextDisplay());
+        if(stop!=null) StartCoroutine(stop.Stop());
+        if(bgmObject!=null) bgmObject.PlayMusic();
+        
+
         if(specialEvent!=null) specialEvent.FadeOut();
         yield break;
 
