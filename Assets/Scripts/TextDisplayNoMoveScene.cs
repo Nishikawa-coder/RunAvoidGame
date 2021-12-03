@@ -14,6 +14,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     string displayText;
     int textCharNumber;
     public MoveScript next;    
+    public EventManagerScript specialEvent;    
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         this.GetComponent<Text>().text = "";
         spaceObject.SetActive(false);
         if(next!=null) StartCoroutine(next.Move());
-        else FadeManageScript.FadeOut(5);
+        if(specialEvent!=null) specialEvent.FadeOut();
         yield break;
 
 

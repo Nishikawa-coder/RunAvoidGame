@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EventManager3Script : MonoBehaviour
 {
+    
     // [SerializeField] GameObject text;
     // [SerializeField] GameObject text2;
     // [SerializeField] GameObject cat;

@@ -10111,6 +10111,7 @@ MonoBehaviour:
   texts:
   - "\uFF1F\uFF1F\u300C\u3084\u3042\uFF01\u3055\u3063\u304D\u3076\u308A\uFF01\u300D"
   next: {fileID: 365020804}
+  specialEvent: {fileID: 0}
 --- !u!1 &365020803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358003308234334084, guid: 1d94dd9042fdc4021a28e43ab742f739, type: 3}
@@ -10250,6 +10251,7 @@ MonoBehaviour:
   - "\uFF1F\uFF1F\u300C\u53CB\u9054\u304C\u306D\u3002\u541B\u304C\u826F\u3044\u5B50\u3060\u304B\u3089\u304F\u308C\u308B\u3063\u3066\u3002\u826F\u304B\u3063\u305F\u306D\u3002\u300D"
   - "\u732B\u306E\u8DB3\u3092\u624B\u306B\u5165\u308C\u305F\u3002"
   next: {fileID: 0}
+  specialEvent: {fileID: 1636117490}
 --- !u!114 &1360756726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10385,7 +10387,7 @@ GameObject:
   - component: {fileID: 1636117491}
   - component: {fileID: 1636117490}
   m_Layer: 0
-  m_Name: EventManager3
+  m_Name: EventManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10400,9 +10402,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1636117489}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb5d611c72a84925a972985335f45a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 19d33ae9a25054ce89d460de31fe9981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneNumber: 5
 --- !u!4 &1636117491
 Transform:
   m_ObjectHideFlags: 0

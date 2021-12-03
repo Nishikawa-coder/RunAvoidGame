@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class EventManagerScript : MonoBehaviour
 {
+    public int nextSceneNumber;
+
+    public void FadeOut()
+    {
+        FadeManageScript.FadeOut(nextSceneNumber);
+    }
     // [SerializeField] GameObject cat;
     // [SerializeField] GameObject player;
     // [SerializeField] GameObject maincamera;
