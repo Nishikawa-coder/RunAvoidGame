@@ -6,20 +6,21 @@ using UnityEngine.UI;
 
 public class TextDisplayNoMoveScene : MonoBehaviour
 {
-    // [SerializeField] GameObject spaceObject;
-    [SerializeField] GameObject lastevent;
+    [SerializeField] GameObject spaceObject;
+    // [SerializeField] GameObject lastevent;
+    //MoveScript nextMoveObj;
     public string[] texts;
     int textNumber;
     string displayText;
-    int textCharNumber;    
+    int textCharNumber;
+    public MoveScript next;    
 
-    
     void Start()
     {
-        // StartCoroutine("TextDisplay");
     }
-    public IEnumerator TextDisplay(int number)
+    public IEnumerator TextDisplay()//次の操作を決める変数
     {
+        spaceObject.SetActive(true);
         foreach (string text in texts)
         {
             string displayText = "";
@@ -35,55 +36,13 @@ public class TextDisplayNoMoveScene : MonoBehaviour
 
         }  
         this.GetComponent<Text>().text = "";
-        /*while(textNumber != texts.Length)
-        {
-            yield return new  WaitForSeconds(0.02f);
-            if (textCharNumber != texts[textNumber].Length) 
-            {
-                //文章を1文字ずつ表示
-                displayText = displayText + texts[textNumber][textCharNumber];
-                textCharNumber = textCharNumber + 1;
-            }
-        
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                displayText = "";
-                textCharNumber = 0;
-                textNumber = textNumber + 1;
-            }
-            
-            this.GetComponent<Text>().text = displayText;
-        }*/
+        spaceObject.SetActive(false);
+        if(next!=null) StartCoroutine(next.Move());
+        else FadeManageScript.FadeOut(5);
+        yield break;
 
-        switch(number){
-            case 1:
-                StartCoroutine((lastevent).GetComponent<EventManagerScript>().DisplayText2());
-                break;
-            case 2:
-                StartCoroutine((lastevent).GetComponent<EventManagerScript>().CatWalk());
-                break;
-            case 3:
-                StartCoroutine((lastevent).GetComponent<EventManagerScript>().PlayerBackWalk());
-                break;
-            case 4:
-                StartCoroutine((lastevent).GetComponent<EventManager2Script>().PlayerWalk2());
-                break;
-            case 5:
-                StartCoroutine((lastevent).GetComponent<EventManager4Script>().CatWalk());
-                break;
-            case 6:
-                StartCoroutine((lastevent).GetComponent<EventManager4Script>().PlayerWalk2());
-                break;
-            case 7:
-                StartCoroutine((lastevent).GetComponent<EventManager3Script>().CatWalk());
-                break;
-            case 8:
-                FadeManageScript.FadeOut(5);
-                break;
-            
-            
 
         }
-    }
+    
         
 }
