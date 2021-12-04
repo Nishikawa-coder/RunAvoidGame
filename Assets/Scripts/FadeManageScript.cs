@@ -24,6 +24,7 @@ public class FadeManageScript:MonoBehaviour{
     {
         //フェード用のCanvas生成
         GameObject FadeCanvasObject = new GameObject("CanvasFade");
+        // Debug.Log(FadesCanvasObject);
         fadeCanvas = FadeCanvasObject.AddComponent<Canvas>();
         FadeCanvasObject.AddComponent<GraphicRaycaster>();
         fadeCanvas.renderMode = RenderMode.ScreenSpaceOverlay;
@@ -34,6 +35,7 @@ public class FadeManageScript:MonoBehaviour{
 
         //フェード用のImage生成
         fadeImage = new GameObject("ImageFade").AddComponent<Image>();
+        // Debug.Log(fadeImage);
         fadeImage.transform.SetParent(fadeCanvas.transform, false);
         fadeImage.rectTransform.anchoredPosition = Vector3.zero;
 
