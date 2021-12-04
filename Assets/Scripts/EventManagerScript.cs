@@ -10,7 +10,8 @@ public class EventManagerScript : MonoBehaviour
 
     public void FadeOut()
     {
-        FadeManageScript.FadeOut(nextSceneNumber);
+        // FadeManageScript.FadeOut(nextSceneNumber);
+        SceneManager.LoadScene(nextSceneNumber);
     }
     
     // [SerializeField] GameObject cat;

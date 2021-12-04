@@ -12,7 +12,7 @@ public class CatJump : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FadeManageScript.FadeIn();
+        // FadeManageScript.FadeIn();
         rbody2D = GetComponent<Rigidbody2D>();
         Invoke("DelayMethod",delaytime);    
     }

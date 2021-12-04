@@ -27,7 +27,8 @@ public class HikariScript : MonoBehaviour
     }
     void DelayMethod()
     {
-        FadeManageScript.FadeOut(NextScene);
+        // FadeManageScript.FadeOut(NextScene);
+        SceneManager.LoadScene(NextScene);
     }
 
 }
