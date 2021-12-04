@@ -29,18 +29,15 @@ public class ScaryBGM : MonoBehaviour
     public void Start()
     {
         beforeScene = "LastScene3";
-        //シーンが切り替わった時に呼ばれるメソッドを登録
         SceneManager.activeSceneChanged += OnActiveSceneChanged;
     }
-     //シーンが切り替わった時に呼ばれるメソッド　
     public void PlayMusic()
     {      
         scarybgm.Play();
     }
     public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
     {      
-        //シーンがどう変わったかで判定
-        // Scene1からScene2へ
+
         if (beforeScene == "LastScene4" && nextScene.name == "LastScene5")
         {
             scarybgm.Stop();
@@ -49,10 +46,4 @@ public class ScaryBGM : MonoBehaviour
         beforeScene = nextScene.name;
     }
 
-    // public void Destroy()
-    // {
-    //     Debug.Log("destroy");
-    //     Destroy(this.gameObject);
-    //     // DestroyImmediate (this, true);        
-    // }
 }

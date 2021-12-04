@@ -7,8 +7,7 @@ public class PlayerCollisionToEnemy : MonoBehaviour
 {
     [SerializeField] private ChangeLayer changeLayer;
     [SerializeField] private LifeGaugeCharacter lifeGaugeCharacter;
-    // [SerializeField] private GameObject obstacleFactory;
-    // Start is called before the first frame update
+
     void Start()
     {
         Time.timeScale = 1;
@@ -21,10 +20,7 @@ public class PlayerCollisionToEnemy : MonoBehaviour
             changeLayer.Setlayer();
 
         }
-        //         if (collision.gameObject.CompareTag("ObstacleEnemy"))
-        // {
-        //     obstacleFactory.GetComponent<ObstacleFactoryScript>().SpawnEnemy();
-        // }
+
     }
     
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Hikari2Script : MonoBehaviour
 {
@@ -28,7 +29,8 @@ public class Hikari2Script : MonoBehaviour
     }
     void DelayMethod()
     {
-        FadeManageScript.FadeOut(NextScene);
+        // FadeManageScript.FadeOut(NextScene);
+        SceneManager.LoadScene(NextScene);
     }
 
 }

@@ -32759,7 +32759,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeCanvaswithHeart
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8446882062545516563, guid: 1ca3aa263fe844519bcf1e56a8864a68, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca3aa263fe844519bcf1e56a8864a68, type: 3}
 --- !u!224 &1692856520 stripped
 RectTransform:

@@ -6,19 +6,14 @@ public class ObstacleFactoryScript : MonoBehaviour
 {
     public RectTransform enemy;
 
-    // Start is called before the first frame update
     void Start()
     {
-        //Instantiate(ball, transform.position, transform.rotation);
-        // Invoke("SpawnEnemy", 0f);    
     }
 
     public void SpawnEnemy()
     {
         Debug.Log("Spawn");
         var parent = this.transform;
-        // enemy = this.GetComponent<Image>();
         Instantiate(enemy, new Vector3(transform.position.x, transform.position.y-100.0f, transform.position.z), transform.rotation, parent);
-        // Instantiate(enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
     }
 }
