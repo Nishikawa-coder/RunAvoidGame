@@ -5,18 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class LifeGaugeCharacter : MonoBehaviour
 {
-    //　HP
     [SerializeField]
     public int hp;
-    //　LifeGaugeスクリプト
-    [SerializeField]
-    private LifePanel lifeGauge;
+    [SerializeField] private LifePanel lifeGauge;
     public string gameOverScene = "GameOverScene1";
-    // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
-        //　体力ゲージに反映
         lifeGauge.SetLifeGauge(hp);
     }
     void Update(){
@@ -26,12 +21,9 @@ public class LifeGaugeCharacter : MonoBehaviour
         }
     }
 
-
-    //　ダメージ処理メソッド（全削除＆HP分作成）
     public void Damage(int damage)
     {
         hp -= damage;
-        //　0より下の数値にならないようにする
         hp = Mathf.Max(0, hp);
         if (hp > 0)
         {
