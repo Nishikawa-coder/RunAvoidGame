@@ -10,7 +10,9 @@ public class MoveScript : MonoBehaviour
     public MoveScript move;
     public Move2Script move2;
     public EventManagerScript specialEvent;
-    public StopScript stop;         
+    public StopScript stop;
+    public ScaryBGM bgmObject;
+    public GameObject activeObject;         
 
     private int count=0;
     public IEnumerator Move()
@@ -25,7 +27,8 @@ public class MoveScript : MonoBehaviour
         if(move2!=null) StartCoroutine(move2.Move());
         if(speak!=null) StartCoroutine(speak.TextDisplay());
         if(stop!=null) StartCoroutine(stop.Stop());
-
+        if(bgmObject!=null) bgmObject.PlayMusic();
+        if(activeObject != null) activeObject.SetActive(true);
         if(specialEvent!=null) specialEvent.FadeOut();
         yield break;
     }

@@ -18,7 +18,9 @@ public class TextDisplayNoMoveScene : MonoBehaviour
     public TextDisplayNoMoveScene speak;    
     public EventManagerScript specialEvent;    
     public StopScript stop;    
-    public ScaryBGM bgmObject;    
+    public ScaryBGM bgmObject;
+    public GameObject activeObject;
+    
 
     void Start()
     {
@@ -48,7 +50,7 @@ public class TextDisplayNoMoveScene : MonoBehaviour
         if(speak!=null) StartCoroutine(speak.TextDisplay());
         if(stop!=null) StartCoroutine(stop.Stop());
         if(bgmObject!=null) bgmObject.PlayMusic();
-        
+        if(activeObject != null) activeObject.SetActive(true);
 
         if(specialEvent!=null) specialEvent.FadeOut();
         yield break;
