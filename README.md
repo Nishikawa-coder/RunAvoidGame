@@ -1,4 +1,4 @@
 # RunAvoidGame
-##Outline
-#Genre
+## Outline
+# Genre  
 Run game
